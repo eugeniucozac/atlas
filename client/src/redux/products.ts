@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createSlice } from "@reduxjs/toolkit";
 import { AppThunk } from "./store";
-import { ProductSelectorType } from "../type";
+import { ProductsSelectorType } from "../type";
 
 export const initialState = {
   loading: false,
@@ -41,5 +41,5 @@ export const fetchProducts = (): AppThunk => async (dispatch) => {
 export const { getProducts, getProductsSuccess, getProductsFailure } =
   productsSlice.actions;
 
-export const productsSelector = (state: ProductSelectorType) => state.products;
+export const productsSelector = (state: ProductsSelectorType) => state.products;
 export default productsSlice.reducer;

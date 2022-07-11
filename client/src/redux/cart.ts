@@ -9,7 +9,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    add: (state: CartSelectorType, { payload }) => {
+    add: (state: any, { payload }) => {
       let itemExist = state.items?.find(
         (item: CartType) => payload._id === item._id
       );

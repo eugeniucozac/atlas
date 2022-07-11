@@ -11,7 +11,7 @@ export interface ProductType extends BaseType {
   quantity?: number;
 }
 
-export interface ProductSelectorType {
+export interface ProductsSelectorType {
   products: {
     products: ProductType[];
     loading: boolean;
@@ -29,7 +29,7 @@ export interface CartType extends BaseType {
 
 export interface ProductAndGiftsType {
   product: ProductType;
-  gifts?: BaseType[];
+  gifts: BaseType[];
 }
 
 export interface TaxesAndTotalType {
@@ -53,6 +53,16 @@ export interface CartSelectorType {
   cart: {
     items: CartType[];
   };
+}
+
+export interface ProductSelectorType {
+  product: {
+    product: ProductType;
+  };
+}
+
+export interface ReactChildren {
+  children: ReactNode;
 }
 
 export interface CartSetType {
